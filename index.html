@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.dom {
+			width: 500px;
+			height: 500px;
+			margin: 10px auto;
+		}
+		.row {
+			height: 25px;
+			overflow: hidden;
+		}
+		.col {
+			float: left;
+			width: 25px;
+			height: 25px;
+			border: 0.5px solid #666;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src = "js/Block.js"></script>
+	<script type="text/javascript" src = "js/Food.js"></script>
+	<script type="text/javascript" src = "js/Snake.js"></script>
+	<script type="text/javascript" src = "js/Game.js"></script>
+	<script type="text/javascript" src = "js/Map.js"></script>
+	<script type="text/javascript">
+		//定义一个对象 用于储存蛇头 身 尾
+		var obj = {
+			snakehead: ["img/1.png","img/2.png","img/3.png","img/4.png"],
+			snakebody: ["img/5.png"],
+			snaketail: ["img/6.png","img/7.png","img/8.png","img/9.png"]
+		}
+		//实例化
+		var map = new Map(20,20,500,500);
+		var food = new Food(3,9,"img/food.jpg");
+		var block = new Block("img/block.png");
+		var snake = new Snake(obj);
+
+		var game = new Game(map,food,block,snake);
+		
+
+
+
+	</script>
+	
+</body>
+</html>
